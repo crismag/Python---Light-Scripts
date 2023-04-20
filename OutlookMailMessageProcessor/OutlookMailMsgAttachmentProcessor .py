@@ -1,8 +1,4 @@
-import os
-import win32com.client
-import zipfile
-import tarfile
-import gzip
+
 """
 Script Name: OutlookMailMsgAttachmentProcessor.py
 Description: A script to extract attachments from an Outlook .msg file and save them to a directory.
@@ -12,6 +8,11 @@ Author: Cristopher S. Magalang
 Date: April 20, 2023
 """
 
+import os
+import win32com.client
+import zipfile
+import tarfile
+import gzip
 import logging
 import datetime
 
