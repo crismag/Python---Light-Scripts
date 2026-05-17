@@ -1,0 +1,21 @@
+[
+  {
+    "url": "https://example.com",
+    "status_code": 200,
+    "final_url": "https://example.com/",
+    "present": {},
+    "missing": [
+      "Strict-Transport-Security",
+      "Content-Security-Policy",
+      "X-Content-Type-Options",
+      "Referrer-Policy",
+      "Permissions-Policy",
+      "X-Frame-Options"
+    ],
+    "warnings": [
+      "HTTPS response is missing Strict-Transport-Security.",
+      "X-Content-Type-Options should usually be set to nosniff."
+    ],
+    "error": null
+  }
+]

@@ -1,0 +1,73 @@
+report:
+  title: "Q2 2026 Engineering Infrastructure Review"
+  subtitle: "Platform Engineering Division"
+  date: "2026-05-17"
+  authors:
+    - name: "Priya Anand"
+      title: "Tech Lead"
+    - name: "Sam Oduya"
+      title: "SRE"
+  confidentiality: "Internal Use Only"
+
+sections:
+  - title: "Executive Summary"
+    content: |
+      The infrastructure review for Q2 2026 shows strong overall health across the production
+      fleet. Key highlights include a 99.97% aggregate uptime, a reduction in p99 API latency
+      from 18 ms to 12 ms following the router migration, and successful onboarding of three
+      new service teams onto the shared pipeline.
+    highlight: true
+
+  - title: "Capacity & Performance"
+    content: |
+      Current peak throughput stands at 42,000 events/second with headroom to 80,000 before
+      the next scaling tier is required. Memory utilization across Kubernetes nodes averages
+      61%, which is within the 70% soft limit. Two nodes were reclaimed from the legacy fleet
+      and repurposed to the new schema-registry rollout.
+    metrics:
+      - label: "Peak EPS"
+        value: "42,000"
+      - label: "p99 Latency"
+        value: "12 ms"
+      - label: "Node Util Avg"
+        value: "61%"
+      - label: "Uptime"
+        value: "99.97%"
+
+  - title: "Incident Summary"
+    content: |
+      Two Sev-2 incidents were recorded in Q2. Both were caused by dependency upgrades
+      without canary rollout enforcement. Corrective action: mandatory canary policy added
+      to CI/CD pipeline as of 2026-04-22. No Sev-1 incidents this quarter.
+    incidents:
+      - id: "INC-0441"
+        severity: "Sev-2"
+        date: "2026-04-08"
+        resolution_hrs: 2.5
+      - id: "INC-0458"
+        severity: "Sev-2"
+        date: "2026-04-20"
+        resolution_hrs: 1.0
+
+  - title: "Security & Compliance"
+    content: |
+      All services passed the bi-annual vulnerability scan. CVE triage identified 4 medium
+      findings in third-party dependencies; patches applied and verified by 2026-05-01.
+      SOC 2 Type II re-audit scheduled for 2026-07-10.
+
+  - title: "Next Steps & Action Items"
+    content: |
+      The following actions are tracked for Q3 2026.
+    action_items:
+      - owner: "Leila Nouri"
+        due: "2026-07-15"
+        task: "Schema-registry integration (phase 1)"
+      - owner: "Marcus Webb"
+        due: "2026-06-30"
+        task: "Upgrade kafka-python to 2.1.x"
+      - owner: "Sam Oduya"
+        due: "2026-07-01"
+        task: "Node auto-scaling policy review"
+      - owner: "Priya Anand"
+        due: "2026-07-10"
+        task: "SOC 2 audit preparation"

@@ -1,0 +1,21 @@
+date,region,product,units,unit_price,revenue
+2024-01-05,North,Widget A,120,9.99,1198.80
+2024-01-08,South,Widget B,85,14.50,1232.50
+2024-01-12,East,Gadget Pro,40,49.99,1999.60
+2024-01-15,West,Widget A,200,9.99,1998.00
+2024-01-19,North,Gadget Pro,30,49.99,1499.70
+2024-01-22,South,Accessory X,150,4.25,637.50
+2024-02-03,East,Widget B,95,14.50,1377.50
+2024-02-07,West,Accessory X,220,4.25,935.00
+2024-02-11,North,Widget B,110,14.50,1595.00
+2024-02-14,South,Gadget Pro,55,49.99,2749.45
+2024-02-18,East,Widget A,180,9.99,1798.20
+2024-02-25,West,Gadget Pro,20,49.99,999.80
+2024-03-04,North,Accessory X,300,4.25,1275.00
+2024-03-08,South,Widget A,145,9.99,1448.55
+2024-03-12,East,Accessory X,190,4.25,807.50
+2024-03-15,West,Widget B,75,14.50,1087.50
+2024-03-19,North,Gadget Pro,60,49.99,2999.40
+2024-03-22,South,Widget B,130,14.50,1885.00
+2024-03-26,East,Gadget Pro,45,49.99,2249.55
+2024-03-29,West,Widget A,160,9.99,1598.40

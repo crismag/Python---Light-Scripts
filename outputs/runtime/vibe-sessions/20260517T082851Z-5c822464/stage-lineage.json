@@ -1,0 +1,68 @@
+{
+  "run_id": "20260517T082851Z-5c822464",
+  "root_run_id": "20260517T082851Z-5c822464",
+  "stages": [
+    {
+      "stage_name": "skeleton_check",
+      "run_id": "20260517T082851Z-5c822464",
+      "root_run_id": "20260517T082851Z-5c822464",
+      "previous_stage_name": null,
+      "previous_stage_receipt_path": null,
+      "current_receipt_path": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082851Z-5c822464/skeleton-receipt.json",
+      "transition_validated": true,
+      "validated_at": "2026-05-17T08:28:52Z"
+    },
+    {
+      "stage_name": "deep_interview",
+      "run_id": "20260517T082851Z-5c822464",
+      "root_run_id": "20260517T082851Z-5c822464",
+      "previous_stage_name": "skeleton_check",
+      "previous_stage_receipt_path": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082851Z-5c822464/skeleton-receipt.json",
+      "current_receipt_path": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082851Z-5c822464/intent-contract.json",
+      "transition_validated": true,
+      "validated_at": "2026-05-17T08:28:54Z"
+    },
+    {
+      "stage_name": "requirement_doc",
+      "run_id": "20260517T082851Z-5c822464",
+      "root_run_id": "20260517T082851Z-5c822464",
+      "previous_stage_name": "deep_interview",
+      "previous_stage_receipt_path": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082851Z-5c822464/intent-contract.json",
+      "current_receipt_path": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082851Z-5c822464/requirement-doc-receipt.json",
+      "transition_validated": true,
+      "validated_at": "2026-05-17T08:28:54Z"
+    },
+    {
+      "stage_name": "xl_plan",
+      "run_id": "20260517T082851Z-5c822464",
+      "root_run_id": "20260517T082851Z-5c822464",
+      "previous_stage_name": "requirement_doc",
+      "previous_stage_receipt_path": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082851Z-5c822464/requirement-doc-receipt.json",
+      "current_receipt_path": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082851Z-5c822464/execution-plan-receipt.json",
+      "transition_validated": true,
+      "validated_at": "2026-05-17T08:28:55Z"
+    },
+    {
+      "stage_name": "plan_execute",
+      "run_id": "20260517T082851Z-5c822464",
+      "root_run_id": "20260517T082851Z-5c822464",
+      "previous_stage_name": "xl_plan",
+      "previous_stage_receipt_path": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082851Z-5c822464/execution-plan-receipt.json",
+      "current_receipt_path": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082851Z-5c822464/phase-execute.json",
+      "transition_validated": true,
+      "validated_at": "2026-05-17T08:28:57Z"
+    },
+    {
+      "stage_name": "phase_cleanup",
+      "run_id": "20260517T082851Z-5c822464",
+      "root_run_id": "20260517T082851Z-5c822464",
+      "previous_stage_name": "plan_execute",
+      "previous_stage_receipt_path": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082851Z-5c822464/phase-execute.json",
+      "current_receipt_path": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082851Z-5c822464/cleanup-receipt.json",
+      "transition_validated": true,
+      "validated_at": "2026-05-17T08:28:58Z"
+    }
+  ],
+  "last_stage_name": "phase_cleanup",
+  "updated_at": "2026-05-17T08:28:58Z"
+}

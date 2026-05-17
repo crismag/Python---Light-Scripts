@@ -1,0 +1,13 @@
+[
+  {
+    "url": "https://example.com",
+    "status_code": 200,
+    "final_url": "https://example.com/",
+    "title": "Example Domain",
+    "description": null,
+    "canonical": null,
+    "open_graph": {},
+    "twitter": {},
+    "error": null
+  }
+]

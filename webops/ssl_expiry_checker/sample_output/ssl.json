@@ -1,0 +1,20 @@
+[
+  {
+    "host": "example.com",
+    "port": 443,
+    "ok": true,
+    "expires_at": "2026-07-01T21:24:46+00:00",
+    "days_remaining": 45,
+    "warning": null,
+    "error": null
+  },
+  {
+    "host": "python.org",
+    "port": 443,
+    "ok": true,
+    "expires_at": "2027-02-14T13:03:45+00:00",
+    "days_remaining": 273,
+    "warning": null,
+    "error": null
+  }
+]

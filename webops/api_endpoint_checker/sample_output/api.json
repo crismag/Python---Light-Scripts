@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://httpbin.org/json",
+    "method": "GET",
+    "ok": true,
+    "status_code": 200,
+    "expected_status": 200,
+    "missing_json_fields": [],
+    "error": null
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "version": "2.4.1",
+    "date": "2026-05-10",
+    "entries": [
+      {"type": "fix",      "description": "Correct off-by-one in batch cursor pagination for large result sets."},
+      {"type": "fix",      "description": "Handle empty YAML sections gracefully in report renderer."},
+      {"type": "chore",    "description": "Pin kafka-python to 2.0.2 to avoid CVE-2024-31141."}
+    ]
+  },
+  {
+    "version": "2.4.0",
+    "date": "2026-04-01",
+    "entries": [
+      {"type": "feat",     "description": "Add schema-registry client with subject auto-registration."},
+      {"type": "feat",     "description": "Introduce mandatory canary enforcement gate in CI/CD pipeline."},
+      {"type": "improve",  "description": "Router rewritten in Go — p99 latency drops from 18 ms to 12 ms."},
+      {"type": "fix",      "description": "Resolve race condition in transformer shutdown sequence."},
+      {"type": "docs",     "description": "Add architecture diagram and data-flow walkthrough to README."}
+    ]
+  },
+  {
+    "version": "2.3.2",
+    "date": "2026-02-14",
+    "entries": [
+      {"type": "fix",      "description": "Prevent duplicate event delivery when Kafka consumer rebalances."},
+      {"type": "chore",    "description": "Upgrade pydantic to 2.7.1 (Python 3.12 compatibility)."},
+      {"type": "test",     "description": "Add integration tests for transformer retry logic."}
+    ]
+  },
+  {
+    "version": "2.3.1",
+    "date": "2026-01-20",
+    "entries": [
+      {"type": "fix",      "description": "Fix memory leak in ingestor when upstream connection is dropped."},
+      {"type": "improve",  "description": "Reduce Docker image size by 38% via multi-stage build."}
+    ]
+  },
+  {
+    "version": "2.3.0",
+    "date": "2025-12-05",
+    "entries": [
+      {"type": "feat",     "description": "Dashboard: add real-time lag monitor for Kafka consumer groups."},
+      {"type": "feat",     "description": "Expose /metrics endpoint on all services (Prometheus format)."},
+      {"type": "docs",     "description": "Publish runbook for common operational tasks."},
+      {"type": "chore",    "description": "Migrate CI from Jenkins to GitHub Actions."}
+    ]
+  }
+]

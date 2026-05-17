@@ -1,0 +1,7 @@
+urls:
+  - url: https://example.com
+    expected_status: 200
+  - url: https://www.python.org
+    expected_status: 200
+  - https://httpbin.org/status/204
+

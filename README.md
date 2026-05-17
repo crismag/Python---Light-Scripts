@@ -18,8 +18,32 @@ python_light_scripts/      Importable library (cross-platform, import-safe)
   _network/   [ISOLATED]   Network/credential-bound code (Google Drive)
 examples/                  Runnable demos / CLIs (entry points guarded)
 tests/                     pytest suite
-docs/                      REPO_AUDIT.md and other docs
+docs/                      Supporting documentation (requirements, plans)
+
+document_generation/       Automation cookbook — Markdown/HTML/docx report generation
+excel_tools/               Automation cookbook — Excel generation, parsing, dashboards
+pdf_tools/                 Automation cookbook — PDF generation, merging, reports
 ```
+
+## Automation cookbook sections
+
+Alongside the `python_light_scripts` package, three top-level sections collect
+**standalone, copy-and-run automation scripts**. Unlike the package, every
+script here is fully self-contained — no imports between scripts, no shared
+package — so you can lift a single file into your own work. Each section has
+its own `README.md`, `ROADMAP.md`, `requirements.txt`, sample datasets and
+`tests/`.
+
+| Section | Focus | Key dependencies |
+|---------|-------|------------------|
+| `document_generation/` | Markdown / HTML / docx reports, templating, multi-source reports | `jinja2`, `pyyaml`, `markdown`, `python-docx` |
+| `excel_tools/` | Workbook generation, parsing, transforms, validation, dashboards | `openpyxl`, `pandas` |
+| `pdf_tools/` | PDF generation, merging/splitting, watermarking, styled reports | `reportlab`, `pypdf` |
+
+Scripts progress through four complexity levels — **beginner → intermediate →
+advanced → showcase**. Install a section's dependencies from its
+`requirements.txt`, then run any script with `--help`. See each section's
+`README.md` for usage and `ROADMAP.md` for what is implemented vs planned.
 
 ## Categories
 
@@ -66,4 +90,4 @@ mypy            # type-check
 ## History
 
 This package was produced by a staged refactor of the original flat script
-collection. See `docs/REPO_AUDIT.md` for the per-script audit that drove it.
+collection.

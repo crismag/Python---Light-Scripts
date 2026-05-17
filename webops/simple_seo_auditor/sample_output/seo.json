@@ -1,0 +1,19 @@
+[
+  {
+    "url": "https://example.com",
+    "ok": false,
+    "status_code": 200,
+    "title_length": 14,
+    "description_length": null,
+    "h1_count": 1,
+    "images": 0,
+    "images_missing_alt": 0,
+    "canonical": null,
+    "robots": null,
+    "issues": [
+      "missing meta description",
+      "missing canonical URL"
+    ],
+    "error": null
+  }
+]

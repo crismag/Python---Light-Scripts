@@ -1,0 +1,34 @@
+{
+  "stage": "requirement_doc",
+  "source_stage": "bounded_memory_recall",
+  "owner": "state_store",
+  "disclosure_level": "decision_focused",
+  "generated_at": "2026-05-17T08:27:49Z",
+  "capsule_count": 1,
+  "selected_capsules": [
+    {
+      "capsule_id": "c738ab58fb0618d7",
+      "owner": "Cognee",
+      "lane": "cognee",
+      "kind": "entity_relation_ingest",
+      "updated_at": "2026-05-11T16:13:41Z",
+      "title": "Cognee relation: blender-python-package-scripts-generate-loopable-technovibe-3d-a specified_by 2026-05-11-blender-python-package-scripts-gen...",
+      "why_now": "Matched Cognee memory for requirement_doc.",
+      "expansion_ref": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/memory-backend/cognee-read-response.json#c738ab58fb0618d7",
+      "summary_lines": [
+        "Cognee relation: blender-python-package-scripts-generate-loopable-technovibe-3d-a specified_by 2026-05-11-blender-python-package-scripts-generate-loopable-technovibe-3d-a.md",
+        "specified_by"
+      ]
+    }
+  ],
+  "items": [
+    "Cognee relation: blender-python-package-scripts-generate-loopable-technovibe-3d-a specified_by 2026-05-11-blender-python-package-scripts-generate-loopable-technovibe-3d-a.md",
+    "specified_by"
+  ],
+  "estimated_tokens": 47,
+  "budget": {
+    "top_k": 2,
+    "max_tokens": 120,
+    "max_chars_per_item": 260
+  }
+}

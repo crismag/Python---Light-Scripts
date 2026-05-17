@@ -1,0 +1,10 @@
+{
+  "http://example.com": [
+    {
+      "url": "http://example.com",
+      "status_code": 200,
+      "location": null,
+      "error": null
+    }
+  ]
+}

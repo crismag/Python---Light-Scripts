@@ -1,0 +1,21 @@
+hostname,role,cpu,ram_gb,os,status
+prod-web-01,Web Server,Intel Xeon E5-2680v4 x14,64,Ubuntu 22.04 LTS,online
+prod-web-02,Web Server,Intel Xeon E5-2680v4 x14,64,Ubuntu 22.04 LTS,online
+prod-app-01,App Server,AMD EPYC 7302 x16,128,Ubuntu 22.04 LTS,online
+prod-app-02,App Server,AMD EPYC 7302 x16,128,Ubuntu 22.04 LTS,online
+prod-app-03,App Server,AMD EPYC 7302 x16,128,Ubuntu 22.04 LTS,maintenance
+prod-db-01,Database Primary,AMD EPYC 7502 x32,256,RHEL 9.3,online
+prod-db-02,Database Replica,AMD EPYC 7502 x32,256,RHEL 9.3,online
+prod-db-03,Database Replica,AMD EPYC 7502 x32,256,RHEL 9.3,online
+prod-cache-01,Cache (Redis),Intel Xeon Gold 6248 x20,64,Ubuntu 22.04 LTS,online
+prod-cache-02,Cache (Redis),Intel Xeon Gold 6248 x20,64,Ubuntu 22.04 LTS,online
+prod-kafka-01,Kafka Broker,Intel Xeon Gold 6248 x20,128,Ubuntu 22.04 LTS,online
+prod-kafka-02,Kafka Broker,Intel Xeon Gold 6248 x20,128,Ubuntu 22.04 LTS,online
+prod-kafka-03,Kafka Broker,Intel Xeon Gold 6248 x20,128,Ubuntu 22.04 LTS,online
+prod-mon-01,Monitoring (Prometheus),AMD EPYC 7302 x16,64,Ubuntu 22.04 LTS,online
+prod-lb-01,Load Balancer,Intel Xeon Silver 4214 x12,32,Ubuntu 22.04 LTS,online
+prod-lb-02,Load Balancer,Intel Xeon Silver 4214 x12,32,Ubuntu 22.04 LTS,online
+staging-app-01,App Server,AMD EPYC 7302 x8,64,Ubuntu 22.04 LTS,online
+staging-db-01,Database,AMD EPYC 7302 x8,64,Ubuntu 22.04 LTS,online
+dev-bastion-01,Bastion Host,Intel Xeon E3-1240v6 x4,16,Debian 12,online
+legacy-arch-01,Archive Storage,Intel Xeon E5-2620v4 x8,32,CentOS 7,decommissioning

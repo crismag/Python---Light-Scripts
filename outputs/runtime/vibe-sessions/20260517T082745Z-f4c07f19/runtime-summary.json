@@ -1,0 +1,237 @@
+{
+  "run_id": "20260517T082745Z-f4c07f19",
+  "governance_scope": "root",
+  "mode": "interactive_governed",
+  "task": "analyze webops README files implement standalone Python 3.11 argparse CLI scripts for each webops utility folder only within webops",
+  "generated_at": "2026-05-17T08:27:49Z",
+  "artifact_root": "/mnt/ai/workspaces/Python---Light-Scripts",
+  "session_root": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19",
+  "session_root_relative": "outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19",
+  "hierarchy": {
+    "root_run_id": "20260517T082745Z-f4c07f19",
+    "parent_run_id": null,
+    "parent_unit_id": null,
+    "inherited_requirement_doc_path": null,
+    "inherited_execution_plan_path": null,
+    "delegation_envelope_path": null
+  },
+  "stage_order": [
+    "skeleton_check",
+    "deep_interview",
+    "requirement_doc",
+    "xl_plan",
+    "plan_execute",
+    "phase_cleanup"
+  ],
+  "executed_stage_order": [
+    "skeleton_check",
+    "deep_interview",
+    "requirement_doc"
+  ],
+  "terminal_stage": "requirement_doc",
+  "artifacts": {
+    "skeleton_receipt": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/skeleton-receipt.json",
+    "runtime_input_packet": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/runtime-input-packet.json",
+    "governance_capsule": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/governance-capsule.json",
+    "stage_lineage": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/stage-lineage.json",
+    "intent_contract": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/intent-contract.json",
+    "requirement_doc": "/mnt/ai/workspaces/Python---Light-Scripts/docs/requirements/2026-05-17-analyze-webops-readme-files-implement-standalone-python-3-11-arg.md",
+    "requirement_receipt": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/requirement-doc-receipt.json",
+    "execution_plan": null,
+    "execution_plan_receipt": null,
+    "execute_receipt": null,
+    "execution_manifest": null,
+    "execution_topology": null,
+    "execution_proof_manifest": null,
+    "discussion_specialist_consultation": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/discussion-specialist-consultation.json",
+    "planning_specialist_consultation": null,
+    "specialist_lifecycle_disclosure": null,
+    "host_stage_disclosure": null,
+    "host_user_briefing": "/mnt/ai/workspaces/Python---Light-Scripts/outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/host-user-briefing.md",
+    "cleanup_receipt": null,
+    "delivery_acceptance_report": null,
+    "delivery_acceptance_markdown": null,
+    "memory_activation_report": null,
+    "memory_activation_markdown": null,
+    "delegation_envelope": null,
+    "delegation_validation_receipt": null
+  },
+  "storage": {
+    "workspace_root": "/home/cris/.codex/skills/vibe",
+    "workspace_sidecar_root": "/home/cris/.codex/skills/vibe/.vibeskills",
+    "project_descriptor_path": "/home/cris/.codex/skills/vibe/.vibeskills/project.json",
+    "artifact_root": "/mnt/ai/workspaces/Python---Light-Scripts",
+    "artifact_root_source": "explicit_override",
+    "default_workspace_sidecar_artifact_root": false,
+    "host_sidecar_root": "/home/cris/.codex/.vibeskills",
+    "workspace_memory_identity_root": "/home/cris/.codex/skills/vibe/.vibeskills/project.json",
+    "workspace_memory_identity_scope": "workspace",
+    "workspace_memory_driver_contract": "workspace_shared_memory_v1",
+    "workspace_memory_logical_owners": [
+      "state_store",
+      "serena",
+      "ruflo",
+      "cognee"
+    ]
+  },
+  "memory_activation": null,
+  "delivery_acceptance": null,
+  "specialist_decision": null,
+  "specialist_user_disclosure": null,
+  "specialist_consultation": {
+    "enabled": true,
+    "window_count": 1,
+    "approved_consultation_count": 0,
+    "consulted_unit_count": 0,
+    "routed_unit_count": 0,
+    "user_disclosure_count": 0,
+    "freeze_gate_passed": true,
+    "freeze_gate_error_count": 0,
+    "windows": [
+      {
+        "window_id": "discussion",
+        "stage": "deep_interview",
+        "approved_consultation_count": 0,
+        "consulted_unit_count": 0,
+        "routed_unit_count": 0,
+        "user_disclosure_count": 0,
+        "approved_skill_ids": null,
+        "consulted_skill_ids": null,
+        "routed_skill_ids": null,
+        "deferred_skill_ids": null,
+        "degraded_skill_ids": null,
+        "freeze_gate_passed": true,
+        "freeze_gate_error_count": 0
+      }
+    ]
+  },
+  "specialist_lifecycle_disclosure": null,
+  "host_stage_disclosure": null,
+  "host_user_briefing": {
+    "enabled": true,
+    "mode": "bounded_return_host_briefing",
+    "freeze_gate_passed": true,
+    "segment_count": 1,
+    "segments": [
+      {
+        "segment_id": "bounded_return_control",
+        "stage": "requirement_doc",
+        "category": "runtime_control",
+        "truth_layer": "runtime_control",
+        "status": "return_control_required",
+        "gate_status": null,
+        "skill_count": 0,
+        "skills": [],
+        "rendered_text": "Bounded governed stop reached. Return control to the user now.\n- terminal stage: `requirement_doc`\n- source run id: `20260517T082745Z-f4c07f19`\n- allowed follow-up entries: `vibe`\n- next governed stage after approval: `xl_plan`\n- approval kind: `requirement_confirmation`\n- preferred structured approval action: `approve_requirement`\n- approval instruction: Review the frozen requirement document with the user and wait for an explicit approve/revise reply before planning. Do not auto-continue into `xl_plan` in the same assistant turn.\n- do not continue in the same assistant turn; wait for a new user message before consuming re-entry credentials\n- if you intentionally continue, forward `--continue-from-run-id 20260517T082745Z-f4c07f19` and `--bounded-reentry-token b6387aca0a2e4636a3eeefcc22a4b786` from the latest runtime summary",
+        "control_owner": "user",
+        "source_run_id": "20260517T082745Z-f4c07f19",
+        "reentry_token": "b6387aca0a2e4636a3eeefcc22a4b786",
+        "terminal_stage": "requirement_doc",
+        "next_stage": "xl_plan",
+        "approval_kind": "requirement_confirmation",
+        "approval_prompt": "Review the frozen requirement document with the user and wait for an explicit approve/revise reply before planning. Do not auto-continue into `xl_plan` in the same assistant turn.",
+        "host_decision_contract": {
+          "protocol_version": "v1",
+          "decision_kind": "approval_response",
+          "decision_context": "bounded_stage_reentry",
+          "pending_terminal_stage": "requirement_doc",
+          "next_stage": "xl_plan",
+          "approval_kind": "requirement_confirmation",
+          "allowed_decision_actions": [
+            "approve",
+            "approve_requirement",
+            "approve_requirement_doc",
+            "approve_requirements",
+            "revise",
+            "request_changes",
+            "request_revise",
+            "revise_requirement",
+            "revise_requirement_doc",
+            "revise_requirements"
+          ],
+          "preferred_decision_action": "approve_requirement",
+          "preferred_payload": {
+            "decision_kind": "approval_response",
+            "decision_action": "approve_requirement",
+            "approval_decision": "approve"
+          }
+        },
+        "allowed_followup_entry_ids": [
+          "vibe"
+        ]
+      }
+    ],
+    "rendered_text": "Governed runtime host briefing:\n\nBounded governed stop reached. Return control to the user now.\n- terminal stage: `requirement_doc`\n- source run id: `20260517T082745Z-f4c07f19`\n- allowed follow-up entries: `vibe`\n- next governed stage after approval: `xl_plan`\n- approval kind: `requirement_confirmation`\n- preferred structured approval action: `approve_requirement`\n- approval instruction: Review the frozen requirement document with the user and wait for an explicit approve/revise reply before planning. Do not auto-continue into `xl_plan` in the same assistant turn.\n- do not continue in the same assistant turn; wait for a new user message before consuming re-entry credentials\n- if you intentionally continue, forward `--continue-from-run-id 20260517T082745Z-f4c07f19` and `--bounded-reentry-token b6387aca0a2e4636a3eeefcc22a4b786` from the latest runtime summary"
+  },
+  "bounded_return_control": {
+    "protocol_version": "v1",
+    "enabled": true,
+    "explicit_user_reentry_required": true,
+    "explicit_new_user_message_required": true,
+    "control_owner": "user",
+    "source_run_id": "20260517T082745Z-f4c07f19",
+    "source_entry_intent_id": "vibe",
+    "terminal_stage": "requirement_doc",
+    "next_stage": "xl_plan",
+    "approval_kind": "requirement_confirmation",
+    "approval_prompt": "Review the frozen requirement document with the user and wait for an explicit approve/revise reply before planning. Do not auto-continue into `xl_plan` in the same assistant turn.",
+    "host_decision_contract": {
+      "protocol_version": "v1",
+      "decision_kind": "approval_response",
+      "decision_context": "bounded_stage_reentry",
+      "pending_terminal_stage": "requirement_doc",
+      "next_stage": "xl_plan",
+      "approval_kind": "requirement_confirmation",
+      "allowed_decision_actions": [
+        "approve",
+        "approve_requirement",
+        "approve_requirement_doc",
+        "approve_requirements",
+        "revise",
+        "request_changes",
+        "request_revise",
+        "revise_requirement",
+        "revise_requirement_doc",
+        "revise_requirements"
+      ],
+      "preferred_decision_action": "approve_requirement",
+      "preferred_payload": {
+        "decision_kind": "approval_response",
+        "decision_action": "approve_requirement",
+        "approval_decision": "approve"
+      }
+    },
+    "allowed_followup_entry_ids": [
+      "vibe"
+    ],
+    "reentry_token": "b6387aca0a2e4636a3eeefcc22a4b786",
+    "rendered_text": "Bounded governed stop reached. Return control to the user now.\n- terminal stage: `requirement_doc`\n- source run id: `20260517T082745Z-f4c07f19`\n- explicit user re-entry required before later stages: `true`\n- allowed follow-up entries: `vibe`\n- next governed stage after approval: `xl_plan`\n- approval kind: `requirement_confirmation`\n- preferred structured approval action: `approve_requirement`\n- approval instruction: Review the frozen requirement document with the user and wait for an explicit approve/revise reply before planning. Do not auto-continue into `xl_plan` in the same assistant turn.\n- the host may translate the user's natural-language approval into a structured decision; exact keywords are not required\n- continuation token: `b6387aca0a2e4636a3eeefcc22a4b786`"
+  },
+  "artifacts_relative": {
+    "skeleton_receipt": "outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/skeleton-receipt.json",
+    "runtime_input_packet": "outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/runtime-input-packet.json",
+    "governance_capsule": "outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/governance-capsule.json",
+    "stage_lineage": "outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/stage-lineage.json",
+    "intent_contract": "outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/intent-contract.json",
+    "requirement_doc": "docs/requirements/2026-05-17-analyze-webops-readme-files-implement-standalone-python-3-11-arg.md",
+    "requirement_receipt": "outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/requirement-doc-receipt.json",
+    "execution_plan": null,
+    "execution_plan_receipt": null,
+    "execute_receipt": null,
+    "execution_manifest": null,
+    "execution_topology": null,
+    "execution_proof_manifest": null,
+    "discussion_specialist_consultation": "outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/discussion-specialist-consultation.json",
+    "planning_specialist_consultation": null,
+    "specialist_lifecycle_disclosure": null,
+    "host_stage_disclosure": null,
+    "host_user_briefing": "outputs/runtime/vibe-sessions/20260517T082745Z-f4c07f19/host-user-briefing.md",
+    "cleanup_receipt": null,
+    "delivery_acceptance_report": null,
+    "delivery_acceptance_markdown": null,
+    "memory_activation_report": null,
+    "memory_activation_markdown": null,
+    "delegation_envelope": null,
+    "delegation_validation_receipt": null
+  }
+}

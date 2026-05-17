@@ -1,0 +1,83 @@
+{
+  "enabled": true,
+  "truth_model": "routing_consultation_execution_separated",
+  "layer_count": 4,
+  "skill_count": 1,
+  "skill_ids": [
+    "spreadsheet"
+  ],
+  "layers": [
+    {
+      "layer_id": "discussion_routing",
+      "truth_layer": "routing",
+      "stage": "runtime_input_freeze",
+      "skill_count": 1,
+      "skills": [
+        {
+          "skill_id": "spreadsheet",
+          "why_now": "top ranked specialist candidate from pack 'docs-media' via fallback_task_default",
+          "source": "route_ranked",
+          "native_skill_entrypoint": "/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md",
+          "native_skill_description": "\"Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especially when formulas, references, and formatting need to be preserved and verified.\"",
+          "state": "routed"
+        }
+      ],
+      "rendered_text": "Discussion-chain routed Skills:\n- spreadsheet: top ranked specialist candidate from pack 'docs-media' via fallback_task_default (/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md)"
+    },
+    {
+      "layer_id": "discussion_consultation",
+      "truth_layer": "consultation",
+      "stage": "deep_interview",
+      "skill_count": 1,
+      "skills": [
+        {
+          "skill_id": "spreadsheet",
+          "why_now": "top ranked specialist candidate from pack 'docs-media' via fallback_task_default",
+          "native_skill_entrypoint": "/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md",
+          "native_skill_description": "\"Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especially when formulas, references, and formatting need to be preserved and verified.\"",
+          "state": "routed_pending_current_session",
+          "summary": "Specialist was routed for direct current-session consultation. Load /home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md in the current host session instead of launching a hidden host subprocess. Do not replace this path with Skill(spreadsheet) unless that skill name is explicitly visible in the host registry."
+        }
+      ],
+      "rendered_text": "Specialist consultation routing during discussion:\n- spreadsheet: top ranked specialist candidate from pack 'docs-media' via fallback_task_default (/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md)"
+    },
+    {
+      "layer_id": "planning_consultation",
+      "truth_layer": "consultation",
+      "stage": "requirement_doc",
+      "skill_count": 1,
+      "skills": [
+        {
+          "skill_id": "spreadsheet",
+          "why_now": "top ranked specialist candidate from pack 'docs-media' via fallback_task_default",
+          "native_skill_entrypoint": "/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md",
+          "native_skill_description": "\"Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especially when formulas, references, and formatting need to be preserved and verified.\"",
+          "state": "routed_pending_current_session",
+          "summary": "Specialist was routed for direct current-session consultation. Load /home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md in the current host session instead of launching a hidden host subprocess. Do not replace this path with Skill(spreadsheet) unless that skill name is explicitly visible in the host registry."
+        }
+      ],
+      "rendered_text": "Specialist consultation routing during planning:\n- spreadsheet: top ranked specialist candidate from pack 'docs-media' via fallback_task_default (/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md)"
+    },
+    {
+      "layer_id": "execution_dispatch",
+      "truth_layer": "execution",
+      "stage": "plan_execute",
+      "skill_count": 1,
+      "skills": [
+        {
+          "skill_id": "spreadsheet",
+          "why_now": "approved for execution-time specialist dispatch under governed vibe",
+          "native_skill_entrypoint": "/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md",
+          "native_skill_entrypoint_raw": "/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md",
+          "entrypoint_path_state": "resolved",
+          "entrypoint_missing": false,
+          "entrypoint_path_invalid": false,
+          "native_skill_description": "\"Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) using Python (`openpyxl`, `pandas`), especially when formulas, references, and formatting need to be preserved and verified.\"",
+          "state": "disclosed_for_execution"
+        }
+      ],
+      "rendered_text": "Execution-chain specialist disclosure:\n- spreadsheet: approved for execution (/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md)"
+    }
+  ],
+  "rendered_text": "Discussion-chain routed Skills:\n- spreadsheet: top ranked specialist candidate from pack 'docs-media' via fallback_task_default (/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md)\n\nSpecialist consultation routing during discussion:\n- spreadsheet: top ranked specialist candidate from pack 'docs-media' via fallback_task_default (/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md)\n\nSpecialist consultation routing during planning:\n- spreadsheet: top ranked specialist candidate from pack 'docs-media' via fallback_task_default (/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md)\n\nExecution-chain specialist disclosure:\n- spreadsheet: approved for execution (/home/cris/.codex/skills/vibe/bundled/skills/spreadsheet/SKILL.runtime-mirror.md)"
+}

@@ -1,0 +1,5 @@
+endpoints:
+  - url: https://httpbin.org/json
+    method: GET
+    expected_status: 200
+

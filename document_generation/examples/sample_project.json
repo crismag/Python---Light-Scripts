@@ -1,0 +1,44 @@
+{
+  "project": {
+    "name": "Orion Data Pipeline",
+    "version": "2.4.1",
+    "status": "active",
+    "owner": "Platform Engineering",
+    "created": "2023-06-15",
+    "updated": "2026-03-28",
+    "description": "Real-time event streaming and transformation pipeline for analytics.",
+    "repository": "https://github.com/example-org/orion-pipeline",
+    "language": "Python",
+    "python_version": "3.12"
+  },
+  "team": [
+    {"name": "Priya Anand",    "role": "Tech Lead",       "email": "panand@example.org"},
+    {"name": "Marcus Webb",    "role": "Senior Engineer",  "email": "mwebb@example.org"},
+    {"name": "Leila Nouri",    "role": "Data Engineer",    "email": "lnouri@example.org"},
+    {"name": "Sam Oduya",      "role": "SRE",              "email": "soduya@example.org"}
+  ],
+  "components": [
+    {"name": "Ingestor",   "type": "service", "language": "Python", "status": "stable"},
+    {"name": "Transformer","type": "service", "language": "Python", "status": "stable"},
+    {"name": "Router",     "type": "service", "language": "Go",     "status": "beta"},
+    {"name": "Dashboard",  "type": "ui",      "language": "React",  "status": "stable"}
+  ],
+  "metrics": {
+    "events_per_second": 42000,
+    "p99_latency_ms": 12,
+    "uptime_percent": 99.97,
+    "open_issues": 7,
+    "test_coverage_percent": 88
+  },
+  "dependencies": [
+    {"name": "kafka-python", "version": "2.0.2",  "license": "Apache-2.0"},
+    {"name": "pydantic",     "version": "2.7.1",  "license": "MIT"},
+    {"name": "httpx",        "version": "0.27.0", "license": "BSD-3-Clause"},
+    {"name": "structlog",    "version": "24.1.0", "license": "MIT"}
+  ],
+  "notes": [
+    "Router component migration from Python to Go completed in Q1 2026.",
+    "Latency SLA target is < 20 ms p99 — currently meeting target.",
+    "Next milestone: add schema-registry integration by Q3 2026."
+  ]
+}

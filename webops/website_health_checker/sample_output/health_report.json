@@ -1,0 +1,35 @@
+[
+  {
+    "url": "https://example.com",
+    "method": "GET",
+    "ok": true,
+    "status_code": 200,
+    "expected_status": 200,
+    "final_url": "https://example.com/",
+    "response_ms": 94,
+    "redirect_count": 0,
+    "error": null
+  },
+  {
+    "url": "https://www.python.org",
+    "method": "GET",
+    "ok": true,
+    "status_code": 200,
+    "expected_status": 200,
+    "final_url": "https://www.python.org/",
+    "response_ms": 96,
+    "redirect_count": 0,
+    "error": null
+  },
+  {
+    "url": "https://httpbin.org/status/204",
+    "method": "GET",
+    "ok": true,
+    "status_code": 204,
+    "expected_status": null,
+    "final_url": "https://httpbin.org/status/204",
+    "response_ms": 896,
+    "redirect_count": 0,
+    "error": null
+  }
+]

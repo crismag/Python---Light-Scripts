@@ -31,10 +31,17 @@ dev = ["pytest>=8.0", "ruff>=0.5", "mypy>=1.10"]
 include = ["python_light_scripts*"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = [
+    "tests",
+    "document_generation/tests",
+    "excel_tools/tests",
+    "pdf_tools/tests",
+]
 # Isolated packages are excluded from default collection.
 norecursedirs = ["python_light_scripts/_windows", "python_light_scripts/_network"]
-addopts = "-ra"
+# importlib mode lets each section keep its own tests/test_helpers.py
+# without module-name collisions.
+addopts = "-ra --import-mode=importlib"
 
 [tool.ruff]
 line-length = 110
@@ -53,6 +60,7 @@ select = ["E", "F", "I", "UP", "B", "S"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101"]            # asserts are expected in tests
+"**/tests/*" = ["S101"]         # ...including the per-section test suites
 "examples/*" = ["S"]            # demos may shell out / use subprocess
 
 [tool.mypy]

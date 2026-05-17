@@ -1,0 +1,259 @@
+/* ============================================================
+   report.css — Clean stylesheet for generated HTML reports
+   Used by: html_report.py, report.html.j2
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #1e2229;
+  background: #f4f5f7;
+}
+
+.page-wrapper {
+  max-width: 960px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+}
+
+/* ----- Header ----- */
+.report-header {
+  background: linear-gradient(135deg, #1a3a5c 0%, #2563a8 100%);
+  color: #ffffff;
+  padding: 2.5rem 2.5rem 2rem;
+}
+
+.report-header h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 0.35rem;
+}
+
+.report-header .subtitle {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 1.25rem;
+}
+
+.meta-table {
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+}
+
+.meta-table th,
+.meta-table td {
+  padding: 0.2rem 1rem 0.2rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  text-align: left;
+}
+
+.meta-table th {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  min-width: 130px;
+}
+
+.confidential {
+  color: #ffd166 !important;
+  font-weight: 600 !important;
+}
+
+/* ----- TOC ----- */
+.toc {
+  background: #f0f4f9;
+  border-left: 4px solid #2563a8;
+  padding: 1.5rem 2.5rem;
+}
+
+.toc h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #5a6a82;
+  margin-bottom: 0.75rem;
+}
+
+.toc ol {
+  padding-left: 1.25rem;
+}
+
+.toc li {
+  margin-bottom: 0.3rem;
+}
+
+.toc a {
+  color: #2563a8;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+/* ----- Sections ----- */
+main {
+  padding: 0 2.5rem 1.5rem;
+}
+
+.report-section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #e4e8ef;
+}
+
+.report-section:last-child {
+  border-bottom: none;
+}
+
+.highlight-section {
+  background: #f8fbff;
+  margin: 0 -2.5rem;
+  padding: 2rem 2.5rem;
+  border-left: 4px solid #2563a8;
+}
+
+.report-section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a3a5c;
+  margin-bottom: 0.85rem;
+}
+
+.report-section h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #3a5a80;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 1.25rem 0 0.65rem;
+}
+
+.report-section p {
+  color: #3d4552;
+  max-width: 72ch;
+}
+
+/* ----- Summary Cards ----- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.card {
+  background: #f0f4f9;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  text-align: center;
+}
+
+.card .card-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2563a8;
+  display: block;
+}
+
+.card .card-label {
+  font-size: 0.78rem;
+  color: #6b7a90;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+/* ----- Tables ----- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.data-table thead th {
+  background: #1a3a5c;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: #f4f7fb;
+}
+
+.data-table tbody td {
+  padding: 0.5rem 0.85rem;
+  border-bottom: 1px solid #e4e8ef;
+  color: #2d3540;
+}
+
+.value-cell {
+  font-weight: 600;
+  color: #2563a8 !important;
+}
+
+/* Severity badges */
+.severity-sev1 { color: #c0392b; font-weight: 700; }
+.severity-sev2 { color: #e67e22; font-weight: 700; }
+.severity-sev3 { color: #f1c40f; font-weight: 600; }
+
+/* ----- Bar Chart ----- */
+.chart-container {
+  margin: 1.25rem 0;
+}
+
+.chart-container svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----- Status badges ----- */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-online        { background: #d4edda; color: #155724; }
+.badge-maintenance   { background: #fff3cd; color: #856404; }
+.badge-decommissioning { background: #f8d7da; color: #721c24; }
+.badge-offline       { background: #e2e3e5; color: #383d41; }
+
+/* ----- Footer ----- */
+.report-footer {
+  background: #f0f4f9;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #8a99b0;
+  border-top: 1px solid #e4e8ef;
+}
+
+.report-footer code {
+  background: #e0e7f0;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.78rem;
+}
