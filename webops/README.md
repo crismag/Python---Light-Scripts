@@ -12,22 +12,30 @@ its own folder with a `main.py`, a `README.md`, a `sample_input.*` file and a
 Unlike the other cookbook sections, the scripts here make outbound HTTP(S)
 requests — only to the URLs and hosts you explicitly supply as input.
 
-## Utilities
+## Start Here
 
-| Folder | Purpose | Status |
-|--------|---------|--------|
-| `website_health_checker/` | Check one or more URLs for availability, status code, redirects, and latency | Working |
-| `broken_link_scanner/` | Crawl a page and report broken internal/external links | Working |
-| `sitemap_validator/` | Validate sitemap XML and optionally check URL availability | Working |
-| `security_headers_auditor/` | Check common HTTP security headers | Working |
-| `ssl_expiry_checker/` | Report TLS certificate expiry dates | Working |
-| `uptime_monitor/` | Periodically check endpoints and append uptime results | Working |
-| `redirect_chain_checker/` | Show redirect hops and final landing URL | Working |
-| `webpage_metadata_extractor/` | Extract page title, description, canonical URL, and social metadata | Working |
-| `simple_seo_auditor/` | Run simple on-page SEO checks | Working |
-| `api_endpoint_checker/` | Check JSON/API endpoints for status and expected fields | Working |
-| `robots_txt_analyzer/` | Fetch and inspect `robots.txt` rules | Working |
-| `web_content_change_tracker/` | Detect content changes between runs | Working |
+Every utility at a glance — difficulty level, what it does, what it needs, and
+what it writes. Each utility's folder `README.md` shows the exact command;
+every `main.py` also accepts `--help`.
+
+| Utility | Level | Purpose | Dependencies | Output |
+|---------|-------|---------|--------------|--------|
+| [website_health_checker/](website_health_checker/) | Beginner | Check URLs for availability, status code, redirects, and latency | `requests` | terminal table + optional JSON/Markdown |
+| [ssl_expiry_checker/](ssl_expiry_checker/) | Beginner | Report TLS certificate expiry dates | stdlib only | terminal report + optional JSON |
+| [redirect_chain_checker/](redirect_chain_checker/) | Beginner | Show redirect hops and final landing URL | `requests` | terminal chain + optional JSON |
+| [security_headers_auditor/](security_headers_auditor/) | Beginner | Check common HTTP security headers | `requests` | terminal report + optional JSON/Markdown |
+| [webpage_metadata_extractor/](webpage_metadata_extractor/) | Beginner | Extract title, description, canonical URL, and social metadata | `requests`, `beautifulsoup4` | terminal summary + optional JSON |
+| [broken_link_scanner/](broken_link_scanner/) | Intermediate | Crawl a page and report broken internal/external links | `requests`, `beautifulsoup4` | terminal summary + optional JSON/Markdown |
+| [sitemap_validator/](sitemap_validator/) | Intermediate | Validate sitemap XML and optionally check URL availability | `requests` | terminal summary + optional JSON |
+| [robots_txt_analyzer/](robots_txt_analyzer/) | Intermediate | Fetch and inspect `robots.txt` rules | `requests` | terminal summary + optional JSON |
+| [simple_seo_auditor/](simple_seo_auditor/) | Intermediate | Run simple on-page SEO checks | `requests`, `beautifulsoup4` | terminal report + optional JSON |
+| [api_endpoint_checker/](api_endpoint_checker/) | Intermediate | Check JSON/API endpoints for status and expected fields | `requests` | terminal report + optional JSON |
+| [uptime_monitor/](uptime_monitor/) | Intermediate | Periodically check endpoints and append uptime results | `requests` | terminal lines + optional JSON Lines |
+| [web_content_change_tracker/](web_content_change_tracker/) | Advanced | Detect content changes between runs (content hash + state files) | `requests`, `beautifulsoup4` | change status + state files + optional JSON |
+
+Utilities that accept YAML input files (`website_health_checker/`,
+`uptime_monitor/`, `api_endpoint_checker/`, `web_content_change_tracker/`) also
+use `pyyaml`, imported lazily — text/JSON inputs work without it.
 
 ## Dependencies
 

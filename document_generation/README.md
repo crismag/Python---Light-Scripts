@@ -22,30 +22,22 @@ Practical, self-contained Python scripts for generating documents in multiple fo
 
 ---
 
-## Complexity Levels
+## Start Here
 
-### Beginner
-| Script | Description |
-|--------|-------------|
-| `markdown/table_generator.py` | JSON array or CSV → GitHub-Flavored Markdown table |
-| `markdown/json_to_markdown.py` | JSON object → structured Markdown document |
+Every script at a glance — difficulty level, what it does, what it needs, and
+what it writes. Exact run commands are in
+[CLI Usage Examples](#cli-usage-examples) below; every script also accepts `--help`.
 
-### Intermediate
-| Script | Description |
-|--------|-------------|
-| `report_builders/changelog_generator.py` | JSON change-log entries → CHANGELOG.md |
-| `templating/yaml_report_generator.py` | YAML spec + Jinja2 template → Markdown report |
-| `docx/docx_report.py` | JSON project data → formatted .docx Word document |
-
-### Advanced
-| Script | Description |
-|--------|-------------|
-| `multi_source_reports/multi_source_report.py` | Merge JSON + YAML + CSV into one Markdown report |
-
-### Showcase
-| Script | Description |
-|--------|-------------|
-| `html/html_report.py` | JSON/YAML/CSV → polished HTML dashboard with SVG chart |
+| Script | Level | Purpose | Dependencies | Output |
+|--------|-------|---------|--------------|--------|
+| [markdown/table_generator.py](markdown/table_generator.py) | Beginner | JSON array or CSV → GitHub-Flavored Markdown table | stdlib only | `.md` table file |
+| [markdown/json_to_markdown.py](markdown/json_to_markdown.py) | Beginner | JSON object → structured Markdown document | stdlib only | `.md` document |
+| [report_builders/changelog_generator.py](report_builders/changelog_generator.py) | Intermediate | JSON change-log entries → CHANGELOG | stdlib only | `CHANGELOG.md` |
+| [templating/yaml_report_generator.py](templating/yaml_report_generator.py) | Intermediate | YAML spec + Jinja2 template → Markdown report | `jinja2`, `pyyaml` | `.md` report |
+| [docx/docx_report.py](docx/docx_report.py) | Intermediate | JSON project data → formatted Word document | `python-docx` | `.docx` file |
+| [multi_source_reports/multi_source_report.py](multi_source_reports/multi_source_report.py) | Advanced | Merge JSON + YAML + CSV into one Markdown report | `pyyaml` | `.md` report |
+| [html/html_report.py](html/html_report.py) | Showcase | JSON/YAML/CSV → polished HTML dashboard with SVG chart | `pyyaml` | `.html` page |
+| [helpers.py](helpers.py) | Reference | Copy-ready helper functions with a standalone demo | stdlib only | demo `.md` files |
 
 ---
 

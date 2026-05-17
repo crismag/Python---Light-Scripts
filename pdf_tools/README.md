@@ -24,25 +24,25 @@ Lightweight, self-contained PDF utility scripts built on **reportlab** (generati
 
 ---
 
-## Complexity levels
+## Start Here
 
-### Beginner
-- `generators/simple_pdf.py` — generate a basic PDF from a title + body text
+Every script at a glance — difficulty level, what it does, what it needs, and
+what it writes. Exact run commands are in
+[CLI usage examples](#cli-usage-examples) below; every script also accepts `--help`.
 
-### Intermediate
-- `generators/table_report.py` — paginated table report from CSV or JSON
-- `generators/watermark.py` — stamp a diagonal text watermark across every page
-- `mergers/pdf_merge.py` — merge multiple PDFs into one output file
-- `mergers/pdf_split.py` — split a PDF into per-page or page-range files
-- `extractors/pdf_text_extract.py` — extract text and metadata to .txt or JSON
-
-### Advanced
-- `report_builders/invoice_generator.py` — styled invoice PDF from a JSON spec
-- `transformers/pdf_gutter_adjust.py` — adjust a PDF's inside/gutter margin by shifting page content outward (single-file or batch)
-
-### Showcase
-- `report_builders/engineering_report.py` — multi-section report with TOC, charts, tables
-- `generators/certificate_generator.py` — presentation-quality certificate PDF
+| Script | Level | Purpose | Dependencies | Output |
+|--------|-------|---------|--------------|--------|
+| [generators/simple_pdf.py](generators/simple_pdf.py) | Beginner | Generate a basic PDF from a title + body text | `reportlab` | `.pdf` |
+| [generators/table_report.py](generators/table_report.py) | Intermediate | Paginated table report from CSV or JSON | `reportlab` | `.pdf` |
+| [generators/watermark.py](generators/watermark.py) | Intermediate | Stamp a diagonal text watermark across every page | `reportlab`, `pypdf` | `.pdf` |
+| [mergers/pdf_merge.py](mergers/pdf_merge.py) | Intermediate | Merge multiple PDFs into one output file | `pypdf` | `.pdf` |
+| [mergers/pdf_split.py](mergers/pdf_split.py) | Intermediate | Split a PDF into per-page or page-range files | `pypdf` | `.pdf` files |
+| [extractors/pdf_text_extract.py](extractors/pdf_text_extract.py) | Intermediate | Extract text and metadata to .txt or JSON | `pypdf` | `.txt` / `.json` |
+| [report_builders/invoice_generator.py](report_builders/invoice_generator.py) | Advanced | Styled invoice PDF from a JSON spec | `reportlab` | `.pdf` |
+| [transformers/pdf_gutter_adjust.py](transformers/pdf_gutter_adjust.py) | Advanced | Adjust a PDF's inside/gutter margin by shifting page content outward (single-file or batch) | `pypdf` | `.pdf` |
+| [report_builders/engineering_report.py](report_builders/engineering_report.py) | Showcase | Multi-section report with TOC, charts, tables | `reportlab` | `.pdf` |
+| [generators/certificate_generator.py](generators/certificate_generator.py) | Showcase | Presentation-quality certificate PDF(s) | `reportlab` | `.pdf` file(s) |
+| [helpers.py](helpers.py) | Reference | Copy-ready helper functions with a standalone demo | `reportlab`, `pypdf` | demo `.pdf` |
 
 ---
 

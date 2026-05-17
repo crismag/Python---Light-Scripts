@@ -22,31 +22,23 @@ Every script is fully independent — copy a single file and run it.
 
 ---
 
-## Complexity Levels
+## Start Here
 
-### Beginner
-| Script | Description |
-|--------|-------------|
-| `generators/single_sheet_generator.py` | CSV/JSON → styled single-sheet .xlsx |
-| `imports/csv_to_excel.py`             | One or more CSVs → multi-sheet .xlsx  |
+Every script at a glance — difficulty level, what it does, what it needs, and
+what it writes. Exact run commands are in
+[CLI Usage Examples](#cli-usage-examples) below; every script also accepts `--help`.
 
-### Intermediate
-| Script | Description |
-|--------|-------------|
-| `exports/excel_to_json.py`        | .xlsx sheet → JSON records file           |
-| `generators/formatted_report.py`  | CSV → report with CF, totals, auto-sizing |
-| `transformers/workbook_merge.py`  | Merge multiple .xlsx into one workbook    |
-| `validators/sheet_validator.py`   | Validate columns/values, exit non-zero    |
-
-### Advanced
-| Script | Description |
-|--------|-------------|
-| `dashboards/dashboard_workbook.py` | Raw data sheet + aggregated Summary + chart |
-
-### Showcase
-| Script | Description |
-|--------|-------------|
-| `dashboards/executive_workbook.py` | Cover/KPI + Summary + Detail + CF + chart |
+| Script | Level | Purpose | Dependencies | Output |
+|--------|-------|---------|--------------|--------|
+| [generators/single_sheet_generator.py](generators/single_sheet_generator.py) | Beginner | CSV/JSON → styled single-sheet workbook | `openpyxl` | `.xlsx` |
+| [imports/csv_to_excel.py](imports/csv_to_excel.py) | Beginner | One or more CSVs → multi-sheet workbook | `openpyxl` | `.xlsx` |
+| [exports/excel_to_json.py](exports/excel_to_json.py) | Intermediate | Worksheet → JSON records (file or stdout) | `openpyxl` | `.json` / stdout |
+| [generators/formatted_report.py](generators/formatted_report.py) | Intermediate | CSV → report with conditional formatting, totals, auto-sizing | `openpyxl` | `.xlsx` |
+| [transformers/workbook_merge.py](transformers/workbook_merge.py) | Intermediate | Merge multiple workbooks into one | `openpyxl` | `.xlsx` |
+| [validators/sheet_validator.py](validators/sheet_validator.py) | Intermediate | Validate columns/values; non-zero exit on failure | `openpyxl` | terminal report + exit code |
+| [dashboards/dashboard_workbook.py](dashboards/dashboard_workbook.py) | Advanced | Raw data sheet + aggregated Summary + chart | `openpyxl` | `.xlsx` |
+| [dashboards/executive_workbook.py](dashboards/executive_workbook.py) | Showcase | Cover/KPI + Summary + Detail + conditional formatting + chart | `openpyxl` | `.xlsx` |
+| [helpers.py](helpers.py) | Reference | Copy-ready helper functions with a standalone demo | `openpyxl` | demo `.xlsx` |
 
 ---
 
