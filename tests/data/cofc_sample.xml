@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sample CoFC input for python_light_scripts.xmltools.cofc_reader -->
+<CoFC>
+  <MaskName>MASK01</MaskName>
+  <BestCurrency>N7</BestCurrency>
+  <BestBest>BEST_A</BestBest>
+
+  <CoinistrPricingments>
+    <CoinistrFeature>FEAT_C</CoinistrFeature>
+    <PricingdCoinistrScale>
+      <X>1.0</X>
+      <Y>2.0</Y>
+    </PricingdCoinistrScale>
+    <PricingdCoinistrOrtho>0.5</PricingdCoinistrOrtho>
+    <PricingdCoinistrMark>
+      <PricingdCoinistrMarkId>M1</PricingdCoinistrMarkId>
+      <PricingdCoinistrMarkGraph>
+        <X>10</X>
+        <Y>20</Y>
+      </PricingdCoinistrMarkGraph>
+      <PricingdCoinistrMarkBitcoin>
+        <X>11</X>
+        <Y>21</Y>
+      </PricingdCoinistrMarkBitcoin>
+    </PricingdCoinistrMark>
+    <PricingdCoinistrMark>
+      <PricingdCoinistrMarkId>M2</PricingdCoinistrMarkId>
+      <PricingdCoinistrMarkGraph>
+        <X>30</X>
+        <Y>40</Y>
+      </PricingdCoinistrMarkGraph>
+      <PricingdCoinistrMarkBitcoin>
+        <X>31</X>
+        <Y>41</Y>
+      </PricingdCoinistrMarkBitcoin>
+    </PricingdCoinistrMark>
+  </CoinistrPricingments>
+
+  <CdGroupPricingments>
+    <CdToneClear>CLEAR</CdToneClear>
+    <CdTarget>100</CdTarget>
+    <CdOrientation>H</CdOrientation>
+    <CdFeature>CDF1</CdFeature>
+    <CdPricingment>
+      <PricingdCdSiteId>S1</PricingdCdSiteId>
+      <PricingdCdGraph>5,6</PricingdCdGraph>
+      <PricingdCd>0.1</PricingdCd>
+    </CdPricingment>
+  </CdGroupPricingments>
+</CoFC>

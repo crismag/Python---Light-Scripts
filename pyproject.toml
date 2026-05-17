@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-light-scripts"
+version = "0.1.0"
+description = "A cookbook of small, reusable Python utilities."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Cristopher Magalang" }]
+
+# Core dependencies used by the cross-platform cookbook packages.
+dependencies = [
+    "pandas>=2.0",
+    "openpyxl>=3.1",      # pandas .xlsx engine
+    "lxml>=4.9",
+    "Pillow>=10.0",
+    "tqdm>=4.66",
+    "pyotp>=2.9",
+]
+
+[project.optional-dependencies]
+# Isolated extras — install only where applicable.
+windows = ["pywin32; sys_platform == 'win32'"]
+network = ["google-api-python-client>=2.0", "google-auth>=2.0"]
+ctf = ["rsa>=4.9"]
+dev = ["pytest>=8.0", "ruff>=0.5", "mypy>=1.10"]
+
+[tool.setuptools.packages.find]
+include = ["python_light_scripts*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Isolated packages are excluded from default collection.
+norecursedirs = ["python_light_scripts/_windows", "python_light_scripts/_network"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110
+target-version = "py39"
+# The isolated packages import platform/credential-bound libraries; the
+# notebook is legacy exploratory content kept as-is.
+extend-exclude = [
+    "python_light_scripts/_windows",
+    "python_light_scripts/_network",
+    "examples/notebooks",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "S"]
+# S (flake8-bandit) findings in legacy code are addressed in Phase 3.
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]            # asserts are expected in tests
+"examples/*" = ["S"]            # demos may shell out / use subprocess
+
+[tool.mypy]
+python_version = "3.9"
+files = ["python_light_scripts"]
+ignore_missing_imports = true
+exclude = ["python_light_scripts/_(windows|network)/"]
+# Phase 4 progressively tightens this for the productionized modules.
