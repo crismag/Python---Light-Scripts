@@ -2,9 +2,15 @@
 
 Lightweight website and web-automation utility scripts.
 
-This folder follows the same spirit as the rest of Python Light Scripts:
-small tools, readable code, practical defaults, and examples that are easy to
-run from a terminal.
+This is one of the repository's automation-cookbook sections (alongside
+`document_generation/`, `excel_tools/` and `pdf_tools/`). Every script is
+**standalone and copy-and-run** — no imports between scripts, no shared
+package — so a single file can be lifted into your own work. Each utility has
+its own folder with a `main.py`, a `README.md`, a `sample_input.*` file and a
+`sample_output/` directory.
+
+Unlike the other cookbook sections, the scripts here make outbound HTTP(S)
+requests — only to the URLs and hosts you explicitly supply as input.
 
 ## Utilities
 
@@ -25,15 +31,20 @@ run from a terminal.
 
 ## Dependencies
 
-Use Python 3.11+.
-
-The scripts use:
+Use Python 3.11+. Install the dependencies the scripts share:
 
 ```bash
 python -m pip install requests beautifulsoup4 pyyaml
 ```
 
-Future utilities may also use `beautifulsoup4`.
+- `requests` — used by every utility for HTTP(S) requests.
+- `beautifulsoup4` — used by the HTML-parsing utilities (`broken_link_scanner/`,
+  `simple_seo_auditor/`, `webpage_metadata_extractor/`, `web_content_change_tracker/`).
+- `pyyaml` — optional; only needed when an input file is YAML. It is imported
+  lazily, so text/JSON inputs work without it.
+
+`sitemap_validator/` and `ssl_expiry_checker/` rely only on the standard
+library beyond `requests`.
 
 ## Run The First Utility
 

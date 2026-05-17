@@ -23,22 +23,24 @@ docs/                      Supporting documentation (requirements, plans)
 document_generation/       Automation cookbook — Markdown/HTML/docx report generation
 excel_tools/               Automation cookbook — Excel generation, parsing, dashboards
 pdf_tools/                 Automation cookbook — PDF generation, merging, reports
+webops/                    Automation cookbook — website & web-automation checks (HTTP)
 ```
 
 ## Automation cookbook sections
 
-Alongside the `python_light_scripts` package, three top-level sections collect
+Alongside the `python_light_scripts` package, four top-level sections collect
 **standalone, copy-and-run automation scripts**. Unlike the package, every
 script here is fully self-contained — no imports between scripts, no shared
-package — so you can lift a single file into your own work. Each section has
-its own `README.md`, `ROADMAP.md`, `requirements.txt`, sample datasets and
-`tests/`.
+package — so you can lift a single file into your own work. Each section ships
+its own `README.md` and sample datasets; the three original cookbook sections
+also include `ROADMAP.md`, `requirements.txt` and `tests/`.
 
 | Section | Focus | Key dependencies |
 |---------|-------|------------------|
 | `document_generation/` | Markdown / HTML / docx reports, templating, multi-source reports | `jinja2`, `pyyaml`, `markdown`, `python-docx` |
 | `excel_tools/` | Workbook generation, parsing, transforms, validation, dashboards | `openpyxl`, `pandas` |
 | `pdf_tools/` | PDF generation, merging/splitting, watermarking, styled reports | `reportlab`, `pypdf` |
+| `webops/` | Website health, SEO, security headers, uptime, sitemap & link checks | `requests`, `beautifulsoup4`, `pyyaml` |
 
 Scripts progress through four complexity levels — **beginner → intermediate →
 advanced → showcase**. Install a section's dependencies from its
@@ -74,8 +76,10 @@ python -m pip install -e ".[dev]"
   their platform/credentials are available.
 - **No secrets are stored** in this repository. TOTP and similar helpers take
   secrets as arguments (e.g. via environment variables).
-- **No network calls** are made by the cookbook packages or tests; the only
-  network code lives in the clearly-marked `_network/` package.
+- **No network calls** are made by the `python_light_scripts` package or its
+  tests. Network code is confined to the clearly-marked `_network/` package and
+  the `webops/` automation section, which makes HTTP requests only to the URLs
+  you explicitly supply.
 - Some tools change system state — ACL modification, the Windows registry,
   Outlook COM. These carry warnings in their docstrings; see `SECURITY.md`.
 
